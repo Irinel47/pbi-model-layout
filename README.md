@@ -15,13 +15,17 @@ Available as both a **command-line tool** and a **graphical interface**.
 
 ## Quick Start
 
-### Option 1: Graphical Interface (Recommended)
+### Option 1: Standalone Executable (No Python Required)
+
+Download `pbi-model-layout.exe` from the [Releases](https://github.com/Irinel47/pbi-model-layout/releases) page and run it directly - no Python installation needed.
+
+### Option 2: Graphical Interface
 
 ```bash
 python pbi_layout_gui.py
 ```
 
-### Option 2: Command Line
+### Option 3: Command Line
 
 ```bash
 # 1. Extract relationships from your model
@@ -185,8 +189,9 @@ Each fact followed immediately by its dims in a row to the right. Snowflake chil
 
 ## Changelog
 
-### v1.2 (current)
+### v1.3 (current)
 
+- 📦 **Standalone executable** - Windows `.exe` available in Releases, no Python required
 - 🎨 **Power BI–style preview canvas** - containers with fields, L-shaped connector lines, cardinality symbols (`*` / `1`)
 - 🖱️ **Table click highlight** - click a table to highlight it and all directly related tables
 - 🔵 **Line click highlight** - click a relationship line to highlight it and the matching fields in both containers
@@ -195,27 +200,21 @@ Each fact followed immediately by its dims in a row to the right. Snowflake chil
 - ❄️ **Snowflake placement** - all layout modes now place snowflake children adjacent to their parent dim
 - 📐 **Dynamic container sizing** - container width and height computed from table name length and field count
 
-### v2.1 / v1.1
-
-- Tkinter GUI with 5 layout algorithms
-- Interactive drag-and-drop positioning
-- Zoom/scroll controls
-- Two-step extract-then-apply workflow
-
 ---
 
 ## Files
 
-| File                       | Description                               |
-| -------------------------- | ----------------------------------------- |
-| `pbix_layout_tool.py`      | Core layout engine + CLI                  |
-| `pbi_layout_gui.py`        | Graphical interface (v1.2)                |
-| `layout_preview.png`       | Preview canvas screenshot                 |
-| `before_and_after.png`     | Before/after model view comparison        |
-| `demo_model.pbix`          | Sample Power BI model                     |
-| `demo_model.pbit`          | Sample template (for relation extraction) |
-| `demo_model_arranged.pbix` | Sample output                             |
-| `data/`                    | Sample data used in demo model            |
+| File                       | Description                                        |
+| -------------------------- | -----------------------------------------          |
+| `pbi-model-layout.exe`     | Standalone Windows executable (no Python required) |
+| `pbix_layout_tool.py`      | Core layout engine + CLI                           |
+| `pbi_layout_gui.py`        | Graphical interface (v1.3)                         |
+| `layout_preview.png`       | Preview canvas screenshot                          |
+| `before_and_after.png`     | Before/after model view comparison                 |
+| `demo_model.pbix`          | Sample Power BI model                              |
+| `demo_model.pbit`          | Sample template (for relation extraction)          |
+| `demo_model_arranged.pbix` | Sample output                                      |
+| `data/`                    | Sample data used in demo model                     |
 
 ---
 
